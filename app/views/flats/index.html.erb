@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Flats</h1>
+<% @flats.each do |flat| %>
+<ul>
+<li><%= link_to flat.name, flat %></li>
+<li><%= flat.address %></li>
+<li><%= flat.description %></li>
+<li><%= flat.price_per_night %></li>
+<li><%= flat.number_of_guests %></li>
+</ul>
+<% end %>
+</div>
+
+<%= link_to 'Add New Flat', new_flat_path, class: 'btn btn-primary' %>
